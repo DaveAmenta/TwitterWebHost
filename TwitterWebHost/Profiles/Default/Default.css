@@ -1,0 +1,243 @@
+﻿
+
+/* Global metrics */
+* {
+    font-family: Verdana !important;
+}
+
+/* main tweet metrics */
+.content-main {
+    font-size: 30px;
+    line-height: 1.25; 
+    /* Use full width */
+    width: inherit;
+}
+
+/* modal tweet popup metrics */
+.recent-tweets .tweet
+{
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+/* tweet control metrics */
+.with-icn {
+    font-size: 16px;
+}
+
+/* Metrics for timestamp */
+.time, .time a{
+    font-size: 30px;
+    line-height: 1.25 !important; /* needs important */
+    color: white;
+    float: right;
+    
+}
+/* metrics for handle */
+.username, .username a {
+    font-size: 16px;
+    line-height: 1.25 !important; /* needs important */
+    color: lime;
+}
+
+/* Direct message size metrics */
+.dm-thread-content,
+.dm-thread-snippet,
+.dm-message {
+    font-size: 30px;
+    line-height: 1.25; 
+}
+
+/* Size metrics for textareas */
+.tweet-form div.rich-editor {
+    font-size: 30px;
+    line-height: 1.25; 
+}
+
+/* TWeet pop-up metrics */
+.GalleryTweet {
+    font-size:30px;
+    line-height:1.25;
+}
+
+.conversation-module .missing-tweets-bar .missing-tweets-link {
+    line-height: 1.25;
+}
+
+.conversations-enabled .condensed.tweet-form .tweet-box {
+    height: auto;
+    line-height: 1;
+}
+
+/* Metro-style */
+* {
+    /* needs important */
+    border-radius: 0px !important; 
+    box-shadow: none !important;
+}
+
+.me, /* Hide settings tab */
+.header-inner, /* Remove 'tweets' header at top of column*/
+.form-search, /* Hide search box */
+.topics, /* Hide discover tab */
+.dashboard /* Hide left column */
+{
+   display: none;
+}
+
+/* Remove conversation button since it is outside of the column */
+.conversation-collapse-btn {
+    display: none !important;
+}
+
+/* Fit tweet column to full width */
+.wrapper {
+    width: 100%;
+    padding: 0;
+}
+
+/* Navigation bar does not occlude content */
+.topbar {
+    position: relative;
+    border-bottom: 0;
+}
+
+/* DM height changes */
+.em-conversation-list {
+	height: 800px;
+}
+
+.dm-threads {
+	height: 900px;
+}
+
+.dm-dialog .twttr-dialog-inside {
+	height: 840px;
+}
+
+.dm-convo {
+	height: 670px;
+}
+
+#dm_dialog_conversation .twttr-dialog-content {
+    height: 690px;
+}
+
+.dm-dialog .dm-tweetbox .tweet-content .tweet-box {
+    width: auto;
+}
+
+/* Me card */
+.profile-card.profile-header {
+	float: none;
+	width: 100%;
+}
+/* Remove gradient */
+.profile-header-inner-overlay {
+    background: none;
+}
+
+.module {
+	margin-bottom: 0;
+}
+
+.stream .stream-item .tweet-actions, .stream .open.stream-item .tweet-actions, .stream .stream-item-activity .stream-item-footer .tweet-actions, .stream .open.stream-item .expanded-conversation .original-tweet-container .tweet-actions {
+    box-shadow: none;
+}
+
+.modal {
+    width: 600px;
+}
+
+/* Dark Theme */
+.content-header .header-inner, 
+.stream-item, .unfocusable-stream-item,
+.content-no-header .no-header-inner, 
+.content-main .expansion-container .tweet.ancestor,
+.content-main .expansion-container .tweet.descendant,
+.content-main .expansion-container .view-more-container,
+.content-main .expansion-container .inline-reply-tweetbox,
+input, textarea, div[contenteditable="true"], 
+select,
+.home-tweet-box, 
+.dm-tweetbox, 
+.WebToast-box--altColor, 
+.content-main .conversations-enabled .expansion-container .inline-reply-tweetbox,
+.new-tweets-bar:hover,
+.permalink-tweet:hover, 
+.permalink-tweet.focus, 
+.stream-item.open .original-tweet:hover, 
+.stream-item.open .original-tweet.focus,
+.stream .stream-item .tweet-actions, 
+.stream .stream-item.open .tweet-actions, 
+.stream .stream-item-activity .stream-item-footer .tweet-actions, 
+.stream .stream-item.open .expanded-conversation .original-tweet-container .tweet-actions,
+.new-tweets-bar, 
+.stream .tweet:hover .tweet-actions, 
+.stream .stream-item.open .expanded-conversation .tweet-actions, 
+.stream .stream-item.open .tweet.descendant .tweet-actions,
+.tweet:hover,
+body, 
+.fullname,
+input:focus, 
+textarea:focus, 
+div[contenteditable="true"]:focus, 
+div[contenteditable="true"].fake-focus,
+.modal-content,
+.modal-header,
+.dm-convo,
+.sent .dm-message,
+.received .dm-message,
+.dm-dialog .twttr-dialog-header, 
+.dm-dialog .twttr-dialog-footer,
+.modal-body p,
+.profile-card .flex-module,
+.profile-social-proof,
+.dropdown-menu,
+#global-tweet-dialog .modal-tweet .tweet:hover, 
+#global-tweet-dialog .modal-tweet .tweet,
+.permalink-tweet:hover, 
+.focus.permalink-tweet, 
+.open.stream-item .original-tweet:hover, 
+.open.stream-item .focus.original-tweet,
+.inline-reply-tweetbox,
+.modal .modal-tweet,
+.permalink-tweet, 
+.permalink-tweet:hover,
+.permalink,
+.inline-reply-tweetbox,
+.GalleryTweet ,
+.conversation-module .conversation-tweet-item .tweet:hover,
+.disabled.icon-btn, .disabled.icon-btn:hover, [disabled].icon-btn, [aria-disabled=true].icon-btn ,
+.global-nav-inner  {
+    background-color: #000022;
+    color: #D0D0D0;
+}
+
+.tweet-box[contenteditable="true"]
+{
+    border-color: #D0D0D0;
+}
+
+.dm-thread:hover {
+    background-color: #000022;
+    background-image: none;
+}
+
+.profile-header .profile-card-inner h1, 
+.profile-header .profile-card-inner h2, 
+.profile-header .profile-card-inner p, 
+.profile-header .profile-card-inner s, 
+.profile-header .profile-card-inner a, 
+.profile-header .profile-card-inner a b, 
+.profile-header .profile-card-inner a:hover s, 
+.profile-header .profile-card-inner a:hover b {
+    font-size: 20px;
+    line-height: 1.25;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.GalleryTweet a, .GalleryTweet a:hover, .GalleryTweet a:focus, .GalleryTweet .account-group .fullname, .GalleryTweet .account-group:hover .fullname, .GalleryTweet .pretty-link s, .GalleryTweet .pretty-link b, .GalleryTweet .pretty-link:hover s, .GalleryTweet .pretty-link:hover b, .GalleryTweet .pretty-link:focus s, .GalleryTweet .pretty-link:focus b, .GalleryTweet .tweet-actions > li b,
+a, .btn-link, .btn-link:focus, .icon-btn, .pretty-link b, .pretty-link:hover s, .pretty-link:hover b, .pretty-link:focus s, .pretty-link:focus b, .metadata a:hover, .metadata a:focus, .account-group:hover .fullname, .account-group:focus .fullname, .account-summary:focus .fullname, .message .message-text a, .stats a strong, .plain-btn:hover, .plain-btn:focus, .open.dropdown .plain-btn.user-dropdown, .open > .plain-btn, #global-actions .new::before, .module .list-link:hover, .module .list-link:focus, #user-completion-module .user-completion-step:hover, .stats a:hover, .stats a:hover strong, .stats a:focus, .stats a:focus strong, .profile-modal-header .fullname a:hover, .profile-modal-header .username a:hover, .profile-modal-header .fullname a:focus, .profile-modal-header .username a:focus, .story-article:hover .metadata, .story-article .metadata a:focus, .find-friends-sources li:hover .source, .stream-item a:hover .fullname, .stream-item a:focus .fullname, .stream-item .view-all-supplements:hover, .stream-item .view-all-supplements:focus, .tweet .time a:hover, .tweet .time a:focus, .tweet-actions a, .tweet .with-icn.details b, .tweet .with-icn.details .Icon, .stream-item:hover .original-tweet .expand-action-wrapper, .stream-item .focus.original-tweet .expand-action-wrapper, .original-tweet.opened-tweet .expand-action-wrapper, .stream-item:hover .original-tweet .details b, .stream-item .focus.original-tweet .details b, .open.stream-item .original-tweet .details b, .simple-tweet:hover .details b, .focus.simple-tweet .details b, .open.simple-tweet .details b, .simple-tweet:hover .details .expand-action-wrapper, .focus.simple-tweet .details .expand-action-wrapper, .open.simple-tweet .details .collapse-action-wrapper, .simple-tweet:hover .details .simple-details-link, .focus.simple-tweet .details .simple-details-link, .client-and-actions a:hover, .client-and-actions a:focus, .dismiss-promoted:hover b, .tweet .context .pretty-link:hover s, .tweet .context .pretty-link:hover b, .tweet .context .pretty-link:focus s, .tweet .context .pretty-link:focus b, .list .username a:hover, .list .username a:focus, .list-membership-container .create-a-list, .list-membership-container .create-a-list:hover, .story-header:hover .view-tweets, .card .list-details a:hover, .card .list-details a:focus, .card .card-body:hover .attribution, .card .card-body .attribution:focus, .events-card .card-body:hover .attribution, .events-card .card-body .attribution:focus, .new-tweets-bar, .onebox .soccer ul.ticker a:hover, .onebox .soccer ul.ticker a:focus, .discover-item-actions a, .disco_exp_actions_on_btm.disco-stream-item .more-tweet-actions .btn-link, .disco_exp_actions_on_btm_without_stats.disco-stream-item .more-tweet-actions .btn-link, .remove-background-btn, .stream-item-activity-me .latest-tweet .tweet-row a:hover, .stream-item-activity-me .latest-tweet .tweet-row a:focus, .stream-item-activity-me .latest-tweet .tweet-row a:hover b, .stream-item-activity-me .latest-tweet .tweet-row a:focus b {
+    color: limegreen;
+}
