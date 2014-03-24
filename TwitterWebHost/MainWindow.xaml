@@ -1,0 +1,11 @@
+﻿<Window x:Class="TwitterWebHost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title=""
+        SnapsToDevicePixels="True">
+    <Grid Background="Black">
+        <Image Name="imgTwitter" SnapsToDevicePixels="True" />
+        <WebBrowser Name="webTwitter" SnapsToDevicePixels="True" />
+    </Grid>
+</Window>
