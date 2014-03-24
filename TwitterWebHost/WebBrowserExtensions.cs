@@ -18,9 +18,9 @@ namespace TwitterWebHost
             object QueryService(ref Guid guidService, ref Guid riid);
         }
 
-        public static object QueryService(this IServiceProvider self, Guid service, Guid riid)
+        public static ResultInterface QueryService<ServiceID, InterfaceID, ResultInterface>(this object self)
         {
-            return self.QueryService(ref service, ref riid);
+            return (ResultInterface)((IServiceProvider)self).QueryService(typeof(ServiceID).GUID, typeof(InterfaceID).GUID);
         }
     }
 
@@ -42,10 +42,10 @@ namespace TwitterWebHost
                 var web = ((WebBrowser)sender);
                 web.LoadCompleted -= TryAttach;
                 // This QS call needs to happenon the Document, but it finds the Trident instance which is preserved across navigation.
-                var webBrowser2 = ((COM.IServiceProvider)web.Document).
-                    QueryService(typeof(SHDocVw.IWebBrowserApp).GUID, typeof(SHDocVw.IWebBrowser2).GUID);
-                // can't use a lambda due to ref params.
-                ((SHDocVw.DWebBrowserEvents_Event)webBrowser2).NewWindow += WebBrowser_NewWindow;
+                web.Document.QueryService<
+                    SHDocVw.IWebBrowserApp, 
+                    SHDocVw.IWebBrowser2,
+                    SHDocVw.DWebBrowserEvents_Event>().NewWindow += WebBrowser_NewWindow;
             }
 
             void WebBrowser_NewWindow(string URL, int Flags, string TargetFrameName, ref object PostData, string Headers, ref bool Processed)
@@ -85,11 +85,8 @@ namespace TwitterWebHost
             {
                 if (scr.title == Title)
                 {
-                    scr.innerText = scriptText;
-
                     head.removeChild((IHTMLDOMNode)scr);
-                    head.appendChild((IHTMLDOMNode)scr);
-                    return;
+                    break;
                 }
             }
 

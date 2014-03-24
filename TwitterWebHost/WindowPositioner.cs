@@ -13,15 +13,8 @@ namespace TwitterWebHost
     {
         public static void TrackPosition(this Window self, Func<string> LoadSetting, Action<string> SaveSetting)
         {
-            self.SourceInitialized += (_, __) =>
-                {
-                    WindowPlacement.SetPlacement(new WindowInteropHelper(self).Handle, LoadSetting());
-                };
-
-            self.Closing += (_, __) =>
-                {
-                    SaveSetting(WindowPlacement.GetPlacement(new WindowInteropHelper(self).Handle));
-                };
+            self.SourceInitialized += (_, __) => WindowPlacement.SetPlacement(new WindowInteropHelper(self).Handle, LoadSetting());
+            self.Closing += (_, __) => SaveSetting(WindowPlacement.GetPlacement(new WindowInteropHelper(self).Handle));
         }
     }
 
