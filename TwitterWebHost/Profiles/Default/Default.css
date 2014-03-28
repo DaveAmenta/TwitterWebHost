@@ -29,11 +29,11 @@
 .time, .time a{
     font-size: 30px;
     float: right;
-    
+    line-height: 1.42; /*alignment to the baseline with .username :/ */
 }
 /* metrics for handle */
 .username, .username a {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder !important;
 }
 
@@ -172,6 +172,11 @@
 border: 0;
 }
 
+.global-nav .container {
+    max-width: none;
+}
+
+
 /* Dark Theme */
 .content-header .header-inner, 
 .stream-item, .unfocusable-stream-item,
@@ -294,8 +299,6 @@ body {
 
 .account-group:hover .username, .account-group .username, .account-group:focus .username, .account-summary:focus .username {
     color: #8CB0D3;
-    vertical-align: middle;
-
 }
 
 .global-nav,

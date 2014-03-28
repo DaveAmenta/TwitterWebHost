@@ -113,5 +113,20 @@ namespace TwitterWebHost
             }
             return default(T);
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = System.Windows.WindowState.Minimized;
+        }
+
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = System.Windows.WindowState.Maximized;
+        }
     }
 }
