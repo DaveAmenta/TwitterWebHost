@@ -81,7 +81,7 @@
 .dashboard, /* Hide left column */
 .bird-topbar-etched /* bird */
 {
-   display: none;
+   display: none !important;
 }
 
 /* Remove conversation button since it is outside of the column */
@@ -270,6 +270,11 @@ body {
     color: #8EC98E;
 }
 
+ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-tweet .tweet-row a:hover s, .stream-item-activity-me .latest-tweet .tweet-row a:focus s {
+    color: #8CB0D3;
+}
+
+
  /* header color */
  #global-actions > li > a {
     border-bottom-color: #8CB0D3;
@@ -294,4 +299,8 @@ body {
 .content-header, .content-no-header {
     border-top:none;
     border-bottom: none; /*1px solid #555555*/;
+}
+
+.tweet-btn, .tweet-btn:focus {
+    background: black;
 }
