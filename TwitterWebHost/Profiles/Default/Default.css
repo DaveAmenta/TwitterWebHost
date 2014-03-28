@@ -28,7 +28,6 @@
 /* Metrics for timestamp */
 .time, .time a{
     font-size: 30px;
-    color: white;
     float: right;
     
 }
@@ -56,6 +55,12 @@
 .GalleryTweet {
     font-size:30px;
     line-height:1.25;
+}
+
+/* tweet details text */
+.client-and-actions .metadata {
+    line-height: 1.25;
+    font-size: 30px;
 }
 
 .conversation-module .missing-tweets-bar .missing-tweets-link {
@@ -93,6 +98,11 @@
 .wrapper {
     width: 100%;
     padding: 0;
+}
+
+/* remove dot */
+.tweet .time:before {
+    content: none;
 }
 
 /* buffer top of tweet on threaded timeline conversation */
@@ -225,6 +235,7 @@ div[contenteditable="true"].fake-focus,
 .global-nav-inner  {
     background-color: #111111;
     color: #cccccc;
+    border-color: #555555;
 }
 
 .tweet-box[contenteditable="true"]
@@ -302,5 +313,14 @@ body {
 }
 
 .tweet-btn, .tweet-btn:focus {
-    background: black;
+    background: #111111;
+}
+
+.time, .time a{
+    color: #777777;
+    
+}
+
+.fullname {
+    color: #cccccc !important;
 }

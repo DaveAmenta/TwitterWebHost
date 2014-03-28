@@ -5,7 +5,7 @@ console.log = function (msg) { window.external.log(msg); };
 /* Clear timer instance (file reload) */
 try {
     clearInterval(__g_injectedTimer);
-    console.log('clear timer ' + g_injectedTimer);
+    console.log('clear timer ' + __g_injectedTimer);
 } catch(e) {
     console.log(e);
 }
