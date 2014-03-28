@@ -7,7 +7,7 @@ using TwitterWebHost.Properties;
 
 namespace TwitterWebHost
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         public MainWindow()
         {

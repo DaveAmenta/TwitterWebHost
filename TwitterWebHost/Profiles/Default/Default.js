@@ -25,7 +25,7 @@ function __injectedrefresh() {
             $("li[data-global-action='connect'].active").children(":first").click();
             $("#global-nav-home.active").children(":first").click();
 
-            var oldElements = $("li[class~='js-stream-item']").slice(100);
+            var oldElements = $("li[class~='js-stream-item']").slice(50);
             if (oldElements.length > 0)
             {
                 console.log("Slice elements: " + oldElements.length);
