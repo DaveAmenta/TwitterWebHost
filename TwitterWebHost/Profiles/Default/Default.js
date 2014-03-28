@@ -1,48 +1,46 @@
-﻿
-/* TODO determine why // comments break this... yeah I know. */
-setInterval(function () {
+﻿/* TODO determine why // comments break this... yeah I know. */
+/* Attach logging inside managed code */
+console.log = function (msg) { window.external.log(msg); };
+
+/* Clear timer instance (file reload) */
+try {
+    clearInterval(__g_injectedTimer);
+    console.log('clear timer ' + g_injectedTimer);
+} catch(e) {
+    console.log(e);
+}
+
+var __g_injectedTimer = setInterval(function () { __injectedrefresh(); }, 20 * 1000); /* 20s */
+
+function __injectedrefresh() {
     try
     {
-        if (document.activeElement &&
-            !document.activeElement.classList.contains('rich-editor') && /* textarea */
-            document.documentElement &&
-            document.documentElement.scrollTop == 0)
-        {
-            var homeBtn = document.getElementById('global-nav-home');
-            var connectBtn = $("li[data-global-action='connect']")[0];
+        var IsTextAreaFocused = document.activeElement && document.activeElement.classList.contains('rich-editor');
+        var ScrolledDown = document.documentElement && document.documentElement.scrollTop;
 
-            if (homeBtn && homeBtn.classList.contains("active"))
+        if (!IsTextAreaFocused && ScrolledDown <= 20) {
+
+            console.log("Activating automatic refresh");
+            /* Click home or connect */
+            $("li[data-global-action='connect'].active").children(":first").click();
+            $("#global-nav-home.active").children(":first").click();
+
+            var oldElements = $("li[class~='js-stream-item']").slice(100);
+            if (oldElements.length > 0)
             {
-                homeBtn.children[0].click(); /* may be IE specific */
-                console.log("Click home");
-            }
-            else if (connectBtn && connectBtn.classList.contains("active"))
-            {
-                var connectLink = $("li[data-nav='connect']")[0];
-                if (connectLink)
-                {
-                    connectLink.children[0].click();
-                    console.log("Click connect");
-                }
-            }
-            else
-            {
-                console.log("No button selected");
+                console.log("Slice elements: " + oldElements.length);
+                oldElements.remove();
             }
         }
         else
         {
-            console.log("Not scrolling");
+            console.log("Not activating refresh. | txt=" + IsTextAreaFocused + " scroll=" + ScrolledDown);
         }
     }
     catch (e)
     {
-        /* TODO instrument */
         console.log(e);
     }
-}, 20 * 1000); /* 20s */
+}
 
-/* Attach logging inside managed code */
-console.log = function (msg) { window.external.log(msg); }
-
-
+console.log("Page injection finished.");

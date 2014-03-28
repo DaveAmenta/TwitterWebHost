@@ -13,7 +13,7 @@ namespace TwitterWebHost
     {
         public void log(string msg)
         {
-            Debug.WriteLine("JS console: " + msg);
+            Debug.WriteLine(DateTime.Now.ToShortTimeString() + " console.log: " + msg);
         }
     }
 }

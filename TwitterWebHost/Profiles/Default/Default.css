@@ -7,7 +7,7 @@
 
 /* main tweet metrics */
 .content-main {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.25; 
     /* Use full width */
     width: inherit;
@@ -35,9 +35,10 @@
 }
 /* metrics for handle */
 .username, .username a {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.25 !important; /* needs important */
-    color: lime;
+    color: #1c7cf1;
+    font-weight: bolder !important;
 }
 
 /* Direct message size metrics */
@@ -108,7 +109,7 @@
 }
 
 .dm-threads {
-	height: 900px;
+	height: 800px;
 }
 
 .dm-dialog .twttr-dialog-inside {
@@ -239,5 +240,19 @@ div[contenteditable="true"].fake-focus,
 
 .GalleryTweet a, .GalleryTweet a:hover, .GalleryTweet a:focus, .GalleryTweet .account-group .fullname, .GalleryTweet .account-group:hover .fullname, .GalleryTweet .pretty-link s, .GalleryTweet .pretty-link b, .GalleryTweet .pretty-link:hover s, .GalleryTweet .pretty-link:hover b, .GalleryTweet .pretty-link:focus s, .GalleryTweet .pretty-link:focus b, .GalleryTweet .tweet-actions > li b,
 a, .btn-link, .btn-link:focus, .icon-btn, .pretty-link b, .pretty-link:hover s, .pretty-link:hover b, .pretty-link:focus s, .pretty-link:focus b, .metadata a:hover, .metadata a:focus, .account-group:hover .fullname, .account-group:focus .fullname, .account-summary:focus .fullname, .message .message-text a, .stats a strong, .plain-btn:hover, .plain-btn:focus, .open.dropdown .plain-btn.user-dropdown, .open > .plain-btn, #global-actions .new::before, .module .list-link:hover, .module .list-link:focus, #user-completion-module .user-completion-step:hover, .stats a:hover, .stats a:hover strong, .stats a:focus, .stats a:focus strong, .profile-modal-header .fullname a:hover, .profile-modal-header .username a:hover, .profile-modal-header .fullname a:focus, .profile-modal-header .username a:focus, .story-article:hover .metadata, .story-article .metadata a:focus, .find-friends-sources li:hover .source, .stream-item a:hover .fullname, .stream-item a:focus .fullname, .stream-item .view-all-supplements:hover, .stream-item .view-all-supplements:focus, .tweet .time a:hover, .tweet .time a:focus, .tweet-actions a, .tweet .with-icn.details b, .tweet .with-icn.details .Icon, .stream-item:hover .original-tweet .expand-action-wrapper, .stream-item .focus.original-tweet .expand-action-wrapper, .original-tweet.opened-tweet .expand-action-wrapper, .stream-item:hover .original-tweet .details b, .stream-item .focus.original-tweet .details b, .open.stream-item .original-tweet .details b, .simple-tweet:hover .details b, .focus.simple-tweet .details b, .open.simple-tweet .details b, .simple-tweet:hover .details .expand-action-wrapper, .focus.simple-tweet .details .expand-action-wrapper, .open.simple-tweet .details .collapse-action-wrapper, .simple-tweet:hover .details .simple-details-link, .focus.simple-tweet .details .simple-details-link, .client-and-actions a:hover, .client-and-actions a:focus, .dismiss-promoted:hover b, .tweet .context .pretty-link:hover s, .tweet .context .pretty-link:hover b, .tweet .context .pretty-link:focus s, .tweet .context .pretty-link:focus b, .list .username a:hover, .list .username a:focus, .list-membership-container .create-a-list, .list-membership-container .create-a-list:hover, .story-header:hover .view-tweets, .card .list-details a:hover, .card .list-details a:focus, .card .card-body:hover .attribution, .card .card-body .attribution:focus, .events-card .card-body:hover .attribution, .events-card .card-body .attribution:focus, .new-tweets-bar, .onebox .soccer ul.ticker a:hover, .onebox .soccer ul.ticker a:focus, .discover-item-actions a, .disco_exp_actions_on_btm.disco-stream-item .more-tweet-actions .btn-link, .disco_exp_actions_on_btm_without_stats.disco-stream-item .more-tweet-actions .btn-link, .remove-background-btn, .stream-item-activity-me .latest-tweet .tweet-row a:hover, .stream-item-activity-me .latest-tweet .tweet-row a:focus, .stream-item-activity-me .latest-tweet .tweet-row a:hover b, .stream-item-activity-me .latest-tweet .tweet-row a:focus b {
-    color: limegreen;
+    color: #1c7cf1;
+}
+
+* {     
+    scrollbar-face-color: #1c7cf1;
+    scrollbar-shadow-color: #000000;
+    scrollbar-highlight-color: #000000;
+    scrollbar-3dlight-color: #000000;
+    scrollbar-darkshadow-color: #000000;
+    scrollbar-track-color: #000000;
+    scrollbar-arrow-color: #000000;
+}​
+
+ .username, .username a {
+    color: #1c7cf1;
 }
